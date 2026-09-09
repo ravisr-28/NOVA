@@ -1,0 +1,300 @@
+/*
+ * ============================================================
+ *  NOVA DESIGN SYSTEM — Global Styles & CSS Custom Properties
+ *  Source of truth for all design tokens.
+ * ============================================================
+ */
+
+/* ——————————————————————————————————
+   CSS RESET
+   —————————————————————————————————— */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  color: var(--color-gray-700);
+  background-color: var(--color-gray-50);
+  min-height: 100vh;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-navy-500);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-default);
+}
+
+a:hover {
+  color: var(--color-navy-700);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-gray-800);
+}
+
+h4, h5, h6 {
+  font-family: var(--font-body);
+  color: var(--color-gray-800);
+}
+
+/* ——————————————————————————————————
+   DESIGN TOKENS (CSS Custom Properties)
+   —————————————————————————————————— */
+
+:root {
+  /* --- 1. COLOR PALETTE --- */
+
+  /* Primary — Navy */
+  --color-navy-900: #0B1D3A;
+  --color-navy-800: #132D53;
+  --color-navy-700: #1A3A63;
+  --color-navy-600: #234E78;
+  --color-navy-500: #2D6290;
+
+  /* Secondary — Teal / Forest */
+  --color-teal-900: #1B3A34;
+  --color-teal-800: #264D44;
+  --color-teal-700: #2E6355;
+  --color-teal-600: #3A7D6A;
+  --color-teal-500: #4A9A82;
+
+  /* Accent — Gold / Amber */
+  --color-gold-700: #8B6914;
+  --color-gold-600: #A67C1A;
+  --color-gold-500: #C49A2A;
+  --color-gold-400: #D4AF37;
+  --color-gold-300: #E0C068;
+
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-gray-50: #FAFAF8;
+  --color-gray-100: #F0EFEB;
+  --color-gray-200: #E2E0DA;
+  --color-gray-300: #C8C5BC;
+  --color-gray-400: #A09D94;
+  --color-gray-500: #787570;
+  --color-gray-600: #5C5955;
+  --color-gray-700: #3D3B38;
+  --color-gray-800: #2A2826;
+  --color-gray-900: #1A1917;
+
+  /* Semantic / Status */
+  --color-error: #C0392B;
+  --color-error-light: #E8D0CE;
+  --color-success: #2E6355;
+  --color-success-light: #D4E8E2;
+  --color-warning: #D4AF37;
+  --color-warning-light: #F5EDCE;
+  --color-info: #2D6290;
+  --color-info-light: #D0DDE8;
+
+  /* --- 2. TYPOGRAPHY --- */
+  --font-heading: 'DM Serif Display', 'Georgia', serif;
+  --font-body: 'DM Sans', 'Inter', system-ui, sans-serif;
+  --font-mono: 'DM Mono', 'Fira Code', monospace;
+
+  /* --- 3. SPACING (4px base) --- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+
+  /* --- 4. BORDER RADIUS --- */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-pill: 9999px;
+  --radius-circle: 50%;
+
+  /* --- 5. SHADOWS & ELEVATION --- */
+  --shadow-xs: 0 1px 2px rgba(11, 29, 58, 0.05);
+  --shadow-sm: 0 1px 3px rgba(11, 29, 58, 0.08), 0 1px 2px rgba(11, 29, 58, 0.04);
+  --shadow-md: 0 4px 6px rgba(11, 29, 58, 0.07), 0 2px 4px rgba(11, 29, 58, 0.04);
+  --shadow-lg: 0 10px 15px rgba(11, 29, 58, 0.08), 0 4px 6px rgba(11, 29, 58, 0.04);
+  --shadow-xl: 0 20px 25px rgba(11, 29, 58, 0.10), 0 8px 10px rgba(11, 29, 58, 0.04);
+
+  /* --- 6. TRANSITIONS & ANIMATION --- */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+
+  /* --- 7. Z-INDEX SCALE --- */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  /* --- 8. LAYOUT --- */
+  --container-max: 1280px;
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 72px;
+  --navbar-height: 64px;
+}
+
+/* ——————————————————————————————————
+   TYPOGRAPHY UTILITY CLASSES
+   —————————————————————————————————— */
+
+.text-display {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.text-h1 {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.text-h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.text-h3 {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+
+.text-h4 {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.text-body-lg {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+
+.text-body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+}
+
+.text-body-sm {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.2px;
+}
+
+.text-caption {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+}
+
+.text-overline {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ——————————————————————————————————
+   SCROLLBAR
+   —————————————————————————————————— */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-300);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400);
+}
+
+/* ——————————————————————————————————
+   FOCUS VISIBLE (Accessibility)
+   —————————————————————————————————— */
+
+:focus-visible {
+  outline: 2px solid var(--color-gold-400);
+  outline-offset: 2px;
+}
+
+/* ——————————————————————————————————
+   SELECTION
+   —————————————————————————————————— */
+
+::selection {
+  background-color: rgba(45, 98, 144, 0.15);
+  color: var(--color-navy-900);
+}
